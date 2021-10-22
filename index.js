@@ -1,5 +1,4 @@
 import { connectJoyCon, connectedJoyCons, JoyConLeft } from 'src/index.js';
-console.log("aa")
 const connectButton = document.querySelector('#connect-joy-cons');
 const debugLeft = document.querySelector('#debug-left');
 const debugRight = document.querySelector('#debug-right');
