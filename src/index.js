@@ -1,5 +1,4 @@
 import { JoyConLeft, JoyConRight } from './joycon.js';
-console.log("aa")
 const connectedJoyCons = new Map();
 
 navigator.hid.addEventListener('connect', async ({ device }) => {
