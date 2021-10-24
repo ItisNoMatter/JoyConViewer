@@ -1,4 +1,2 @@
 alert("Hello World!");
-import {hoge} from './hoge.js' 
-
-hoge()
+//import {hoge} from './hoge.js' 
