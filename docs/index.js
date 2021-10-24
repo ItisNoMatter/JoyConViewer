@@ -14,6 +14,7 @@ const visualize = (jouCon,packet) => {
         return;
       }
     const buttons = packet.buttonStatus
+    
     X_button.classList.toggle("highlight",buttons.x)
     Y_button.classList.toggle("highlight",buttons.y)
     A_button.classList.toggle("highlight",buttons.a)
