@@ -5,14 +5,15 @@ const Y_button = document.querySelector('#y_button')
 const A_button = document.querySelector('#a_button')
 const B_button = document.querySelector('#b_button')
 
-const JoystickR_horizontal = document.querySelector('#joystickR-horizontal')
-const JoystickR_vertical = document.querySelector('#joystickR-vertical')
 
 const gyro_x = document.querySelector('#gyro_x')
 const gyro_y = document.querySelector('#gyro_y')
 const gyro_z = document.querySelector('#gyro_z')
 
 connect_button.addEventListener('click',connectJoyCon)
+const counter = document.querySelector('#counter')
+let counter_value = 0
+
 
 
 const visualize = (jouCon,packet) => {
@@ -27,9 +28,6 @@ const visualize = (jouCon,packet) => {
     Y_button.classList.toggle("highlight",buttons.y)
     A_button.classList.toggle("highlight",buttons.a)
     B_button.classList.toggle("highlight",buttons.b)
-
-    JoystickR_horizontal.innerText = joystick.horizontal 
-    JoystickR_vertical.innerText = joystick.vertical 
     
 
     const gyroscope = packet.actualGyroscope
@@ -37,7 +35,10 @@ const visualize = (jouCon,packet) => {
     gyro_x.value = gyroscope.rps.x * gyroMultiplier
     gyro_y.value = gyroscope.rps.y * gyroMultiplier
     gyro_z.value = gyroscope.rps.z * gyroMultiplier
-
+    
+    const THRESHOLD = 0.8
+    count_shake(gyroscope.rps.y * gyroMultiplier,THRESHOLD)
+    counter.innerHTML = counter_value
     const joystickMultiplier = 10
     document.querySelector('#stickR').style.transform = `translateX(${
       joystick.horizontal * joystickMultiplier    }px) translateY(${joystick.vertical * joystickMultiplier}px)`
