@@ -1,4 +1,4 @@
-import { connectJoyCon, connectedJoyCons, JoyConLeft } from '../node_modules/joy-con-webhid/dist/index.js';
+import { connectJoyCon, connectedJoyCons, JoyConLeft } from './node_modules/joy-con-webhid/dist/index.js';
 const connect_button = document.querySelector('#connect-joy-cons')
 const X_button = document.querySelector('#x_button')
 const Y_button = document.querySelector('#y_button')
