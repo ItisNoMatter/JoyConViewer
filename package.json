@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "chart.js": "^3.6.0",
+    "chartjs-plugin-streaming": "^2.0.0",
     "joy-con-webhid": "^0.2.0"
   }
 }
