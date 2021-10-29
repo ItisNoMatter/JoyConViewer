@@ -14,30 +14,53 @@
 <body>
   <button id="connect-joy-cons" type="button">Connect Joy-Cons</button>
 
-  <div id="x_button">
-    <a>X</a>
-    <div class="x"></div>
-  </div>
+  <div class="right_buttons">
+    <div id="x_button">
+      <a>X</a>
+      <div class="x"></div>
+    </div>
 
-  <div id="y_button">
-    <a>Y</a>
-  </div>
+    <div id="y_button">
+      <a>Y</a>
+    </div>
 
-  <div id="a_button">
-    <a>A</a>
-  </div>
+    <div id="a_button">
+      <a>A</a>
+    </div>
 
-  <div id="b_button">
-    <a>B</a>
-  </div>
+    <div id="b_button">
+      <a>B</a>
+    </div>
 
-  <div id="stickR">
-    <a>＠</a>
+    <div id="stickR">
+      <a>＠</a>
+    </div>
   </div>
+  <div class="left_buttons">
+    <div id="up_button">
+      <a>↑</a>
+    </div>
+    <div id="left_button">
+      <a>←</a>
+    </div>
+    <div id="right_button">
+      <a>→</a>
+    </div>
+    <div id="down_button">
+      <a>↓</a>
+    </div>
+    <div id="stickL">
+      <a>＠</a>
+    </div>
+  </div>
+  
   <div>
   </div>
   <div class="canvas-container">
-  <canvas id="myChart" width="100" height="30"　></canvas>
+  <canvas id="myChartR" width="50" height="10"　class="chart"></canvas>
+  </div>
+  <div class="canvas-container">
+  <canvas id="myChartL" width="50" height="10"　class="chart"></canvas>
   </div>
   <a id="counter"></a>
   <a>回shakeされました</a>

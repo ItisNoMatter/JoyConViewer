@@ -1,3 +1,9 @@
+.right_buttons{
+    display: flex;
+}
+.left_buttons{
+    display: flex;
+}
 
 .highlight{
     color:red
